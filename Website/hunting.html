@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davery Valdez's Hunting Hobby</title>
+    <link rel="stylesheet" href="stylesh.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <li class="dropdown">
+                    <a href="hobbies.html">Hobbies</a>
+                    <div class="dropdown-content">
+                        <a href="baking.html">Baking</a>
+                        <a href="hunting.html">Hunting</a>
+                        <a href="gardening.html">Gardening</a>
+                    </div>
+                </li>
+            </ul>
+
+            <li><button id="theme-toggle">Dark Mode</button></li>
+            <script>
+                document.getElementById("theme-toggle").onclick = function () {
+                    document.body.classList.toggle("dark");
+                };
+            </script>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h1>Hunting</h1>
+        <div class="Hunting-text">
+            <p>I have actively been hunting big game for a few years now.
+                Over the years I have harvested 3 elk.</p>
+            <p>More recently, in 2023 I harvested my first bull elk and got
+                this beautiful
+                4 by 5, which I was able to make into a "European" mount.</p>
+        </div>
+        <div class="image-container">
+            <img src="./images/323985C3-AC40-4F9D-AAC2-974BD5A934D4_1_105_c.jpeg" alt="Hunting">
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Davery Valdez.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to Davery Valdez's Website</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact</a>
+                    <li class="dropdown">
+                        <a href="#">Hobbies</a>
+                        <div class="dropdown-content">
+                            <a href="baking.html">Baking</a>
+                            <a href="gardening.html">Gardening</a>
+                            <a href="hunting.html">Hunting</a>
+                        </div>
+                    </li>
+                    <a href="./images/Davery Valdez MR.pdf" target="_blank">Download
+                        my resume</a>
+                </ul>
+
+                <li><button id="theme-toggle">Dark Mode</button></li>
+                <script>
+            document.getElementById("theme-toggle").onclick = function(){
+                document.body.classList.toggle("dark");
+            };
+        </script>
+            </nav>
+        </header>
+        <h1>Davery Valdez</h1>
+
+        <div class="image-container">
+            <img
+                src="./images/2E323B9D-F30F-4637-AF18-ECFE15309DCA_1_105_c.jpeg"
+                alt="Mario and Me">
+            <img src="./images/BIRTHDAY-30.jpg" alt="Davery Valdez" width="300"
+                height="400">
+            <img
+                src="./images/8E4DF8AF-D9FF-4C66-A0E3-64DD2667A3F0_1_105_c.jpeg"
+                alt="My parents">
+        </div>
+
+        <p><i>Biography:</i></p>
+        <p>My name is Davery Valdez and I am currently attending New Mexico
+            State University, majoring in Computer Science.</p>
+        <p>I am from northern NM, but I have lived in Las Cruces, NM for the
+            past 4 years.</p>
+        <p>I am currently working as an Undergraduate Student at Los Alamos
+            National Laboratory.</p>
+        <p><i>Hobbies:</i></p>
+        <p>I enjoy many things like baking, working out, hunting, gardening, and
+            sleeping. <p>You can check out my hobby pages in the dropdown
+                navigation above.</p>
+        </p>
+        <footer>
+            <p>&copy; 2024 Davery Valdez.</p>
+        </footer>
+    </body>
+</html>
