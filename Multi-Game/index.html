@@ -9,10 +9,18 @@
     </head>
 
     <body>
-        <h1>Connect Four</h1>
+        <div class="title-container">
+            <h1>Connect Four</h1>
+        </div>
         <h2 id="winner"></h2>
         <div id="board"></div>
         <div id="turn" class="turn">Current Turn: <span id="current-player">Red</span></div>
-        <button onclick="resetGame()">Reset Game</button>
+        <div id="fireworks"></div>
+        <button class="reset-button" onclick="resetGame()">Reset Game</button>
+        <footer>
+            <div class="copyright">
+                &copy; 2024 Davery Valdez. All rights reserved.
+            </div>
+        </footer>
     </body>
 </html>
