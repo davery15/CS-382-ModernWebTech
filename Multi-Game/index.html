@@ -6,21 +6,41 @@
 
         <link rel="stylesheet" href="style.css">
         <script src="connect4.js"></script>
+
     </head>
 
     <body>
         <div class="title-container">
             <h1>Connect Four</h1>
         </div>
-        <h2 id="winner"></h2>
-        <div id="board"></div>
+        <h2 id="winner"></h2>  
+
+
+        <div id="board-container">
+        <div id="board">
+        </div>
+        <div id="left-rule" class="rule"> 
+            <p> <strong>Gameplay:</strong> </p>
+            <p>Players alternate turns, dropping one disc at a time into any column of the grid. The disc is placed at the lowest available space in the chosen column.</p>
+            <p> <strong>Strategy:</strong> </p>
+            <p>Players must strategically place their discs to both create their own lines and block their opponent's progress. It involves predicting the opponent's moves while planning one's own moves to achieve victory.</p>
+        </div>
+        <div id="right-rule" class="rule">
+            <p> <strong>Objective:</strong> </p>
+            <p>The goal of each player is to create a line of four of their own colored discs either horizontally, vertically, or diagonally.</p>
+            <p> <strong>Winning:</strong> </p>
+            <p>The game ends when one player successfully connects four of their own colored discs in a row. When a player achieves this, they win the game. If the grid is completely filled without any player achieving four in a row, the game is a draw.</p>
+         </div> 
+    </div>
+
         <div id="turn" class="turn">Current Turn: <span id="current-player">Red</span></div>
         <div id="fireworks"></div>
-        <button class="reset-button" onclick="resetGame()">Reset Game</button>
+        <button class="reset-button" onclick="resetGame()">Reset Game</button>        
         <footer>
             <div class="copyright">
                 &copy; 2024 Davery Valdez. All rights reserved.
             </div>
         </footer>
+
     </body>
 </html>

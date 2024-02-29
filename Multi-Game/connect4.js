@@ -17,6 +17,7 @@ var currentColumn;
 
 window.onload = function() {
     setGame();
+    updateTurnDisplay();
 
 }
 
@@ -128,9 +129,22 @@ function setWinner(r, c) {
     }
     gameOver = true;
 }
-
+// Turns display with color
 function updateTurnDisplay() {
-    document.getElementById("current-player").innerText = currentPlayer;
+    let currentPlayerSpan = document.getElementById("current-player");
+    currentPlayerSpan.innerText = currentPlayer;
+
+    // Set color and text shadow based on the current player
+    if (currentPlayer === playerRed) {
+        currentPlayerSpan.style.color = "red";
+        currentPlayerSpan.style.textShadow = "0 0 3px black"; 
+    } else if (currentPlayer === playerYellow) {
+        currentPlayerSpan.style.color = "yellow";
+        currentPlayerSpan.style.textShadow = "0 0 3px black"; // Add text shadow for yellow
+    } else {
+        currentPlayerSpan.style.color = "red"; // Set the initial color to red if currentPlayer isn't explicitly set
+        currentPlayerSpan.style.textShadow = "0 0 3px black"; // Shadow
+    }
 }
 
 function resetGame() {
@@ -148,4 +162,5 @@ function resetGame() {
     fireworks.classList.remove("active");
     // Reset the game board
     setGame();
+    updateTurnDisplay();
 }

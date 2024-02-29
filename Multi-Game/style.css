@@ -147,3 +147,27 @@ footer {
     0% { transform: scale(1); } /* Initial scale */
     100% { transform: scale(1.2); } /* Scale up */
 }
+/* Add styles for the board container */
+#board-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add styles for the rules */
+.rule {
+    position: absolute;
+    height: 100%;
+    width: 350px;
+    background-color: #ababab;
+    line-height: 1.5;
+}
+
+#left-rule {
+    left: 0;
+}
+
+#right-rule {
+    right: 0;
+}
