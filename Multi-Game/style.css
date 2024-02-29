@@ -4,6 +4,10 @@ CS 382
 
 */
 
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for small screens */
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -54,6 +58,7 @@ footer {
     border-radius: 5px; /* Add rounded corners */
     cursor: pointer; /* Add pointer cursor on hover */
     transition: background-color 0.3s; /* Smooth transition for background color change */
+    margin-top: 10px; /* Added space */
 }
 
 #board {
