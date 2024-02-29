@@ -1,7 +1,7 @@
 /* 
 Davery Valdez 
 CS 382
-Multiplayer-Game
+Simple Multiplayer-Game
 
 */
 var playerRed = "Red";
