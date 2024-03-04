@@ -128,8 +128,7 @@ footer {
 /* Styling for the "YOU WIN" message */
 #winner.winner {
     font-size: 3em;
-    color: rgb(0, 0, 0); 
-    text-shadow: 0 0 10px rgb(0, 51, 255); /* Add shadow effect */
+    text-shadow: 0 0 10px rgb(2, 2, 2); /* Add shadow effect */
     animation: winner 2s ease-in-out forwards; /* Animation */
 }
 
