@@ -113,6 +113,30 @@ function checkWin() {
             }
         }
     }
+       // Check for draw
+    let draw = true;
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (board[r][c] === ' ') {
+                draw = false; // If there's an empty space, the game is not a draw
+                break;
+            }
+        }
+        if (!draw) {
+            break;
+        }
+    }
+
+    if (draw) {
+        declareDraw();
+    }
+}
+
+function declareDraw() {
+    let winner = document.getElementById("winner");
+    winner.innerText = "It's a Draw!";
+    winner.classList.add("winner");
+    gameOver = true;
 }
 
 function setWinner(r, c) {
