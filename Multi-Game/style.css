@@ -99,12 +99,17 @@ footer {
 
 /* Add the fireworks animation */
 @keyframes fireworks {
-    0% { background: radial-gradient(circle at 5px 5px, rgb(64, 158, 63), transparent); }
-    25% { background: radial-gradient(circle at 95% 5px, #f00, transparent); }
-    50% { background: radial-gradient(circle at 5px 95%, rgb(84, 17, 147), transparent); }
-    75% { background: radial-gradient(circle at 95% 95%, rgb(227, 121, 7), transparent); }
-    100% { background: radial-gradient(circle at center, rgb(192, 223, 17), transparent); }
-    100% { background: transparent; } 
+    0% { background: radial-gradient(circle at 50% 50%, transparent, transparent); }
+    10% { background: radial-gradient(circle at 15% 15%, #ff0000, transparent); }
+    20% { background: radial-gradient(circle at 85% 15%, #ff8800, transparent); }
+    30% { background: radial-gradient(circle at 15% 85%, #fbff00, transparent); }
+    40% { background: radial-gradient(circle at 85% 85%, #40ff00, transparent); }
+    50% { background: radial-gradient(circle at 50% 50%, #0055ff, transparent); }
+    60% { background: radial-gradient(circle at 25% 50%, #9000ff, transparent); }
+    70% { background: radial-gradient(circle at 75% 50%, #e600ff, transparent); }
+    80% { background: radial-gradient(circle at 50% 25%, #ff0000, transparent); }
+    90% { background: radial-gradient(circle at 50% 75%, #ff8800, transparent); }
+    100% { background: radial-gradient(circle at 50% 50%, transparent, transparent); }
 }
 
 /* Style for fireworks container */
