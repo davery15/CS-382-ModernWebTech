@@ -1,0 +1,182 @@
+/* 
+Davery Valdez 
+CS 382
+
+*/
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for small screens */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* Apply animation to the title */
+h1 {
+    font-size: 3em; 
+    color: #333; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    margin: 0; /* Remove default margins */
+    padding-bottom: 10px; /* Add some space below the header */
+    line-height: 1; /* Ensure minimal line height */
+    animation: jump 0.5s infinite alternate; /* Apply animation */
+}
+
+.title-container {
+    background-color: #ababab; 
+    padding: 10px; /* Add padding to create space around the title */
+    text-align: center; /* Center align the title */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+/* Animation keyframes */
+@keyframes jump {
+    0% { transform: translateY(0); } /* Initial position */
+    100% { transform: translateY(-10px); } /* Move up */
+}
+
+footer {
+    font-weight: bold; /* Make footer text bold */
+    color: #333; /* Default text color */
+    background-color: #ababab; /* Background color for footer */
+    padding: 10px 0; /* Add padding top and bottom */
+    text-align: center; /* Center align text */
+    margin-top: 20px; /* Add some space above the footer */
+}
+
+.copyright {
+    font-size: 0.8em;
+}
+
+.reset-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; 
+    padding: 10px 20px; 
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+    margin-top: 10px; /* Added space */
+}
+
+#board {
+    height: 540px;
+    width: 630px;
+
+    background-color: blue;
+    border: 10px solid darkslateblue;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+
+    background-color: navy;
+    border-radius:50%;
+    border: 5px solid darkslateblue;
+}
+
+/* Add some transition for smoother animation */
+.tile:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    transition: transform 0.2s ease-in-out; /* Add transition effect */
+}
+
+.redPiece {
+    background-color: Red;
+}
+
+.yellowPiece {
+    background-color: Yellow;
+}
+
+/* Add the fireworks animation */
+@keyframes fireworks {
+    0% { background: radial-gradient(circle at 50% 50%, transparent, transparent); }
+    10% { background: radial-gradient(circle at 15% 15%, #ff0000, transparent); }
+    20% { background: radial-gradient(circle at 85% 15%, #ff8800, transparent); }
+    30% { background: radial-gradient(circle at 15% 85%, #fbff00, transparent); }
+    40% { background: radial-gradient(circle at 85% 85%, #40ff00, transparent); }
+    50% { background: radial-gradient(circle at 50% 50%, #0055ff, transparent); }
+    60% { background: radial-gradient(circle at 25% 50%, #9000ff, transparent); }
+    70% { background: radial-gradient(circle at 75% 50%, #e600ff, transparent); }
+    80% { background: radial-gradient(circle at 50% 25%, #ff0000, transparent); }
+    90% { background: radial-gradient(circle at 50% 75%, #ff8800, transparent); }
+    100% { background: radial-gradient(circle at 50% 50%, transparent, transparent); }
+}
+
+/* Style for fireworks container */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none; /* Allow clicks to go through */
+    display: none; /* Initially hidden */
+}
+
+/* Activate fireworks animation */
+#fireworks.active {
+    display: block;
+    animation: fireworks 3s ease-in-out forwards;
+}
+
+/* Styling for the "YOU WIN" message */
+#winner.winner {
+    font-size: 3em;
+    text-shadow: 0 0 10px rgb(2, 2, 2); /* Add shadow effect */
+    animation: winner 2s ease-in-out forwards; /* Animation */
+}
+
+/* Animation for the "YOU WIN" message */
+@keyframes winner {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(2); }
+}
+
+/* Updated styling for the "current turn" display */
+#turn {
+    font-size: 2em; 
+    color: #000000; 
+    animation: pulse 1s infinite alternate; /* Apply animation 1 sec */
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+    0% { transform: scale(1); } /* Initial scale */
+    100% { transform: scale(1.2); } /* Scale up */
+}
+/* Add styles for the board container */
+#board-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add styles for the rules */
+.rule {
+    position: absolute;
+    height: 100%;
+    width: 350px;
+    background-color: #ababab;
+    line-height: 1.5;
+}
+
+#left-rule {
+    left: 0;
+}
+
+#right-rule {
+    right: 0;
+}
