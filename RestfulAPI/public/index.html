@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome to Movie Rank</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Welcome to the Movie Tracker App</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="search-info">
+            <p class="bold-text">Adding your favorite movies you've watched here:</p>
+            <p>Below you can add movies with their attributes using the box below.This will add the movies into the database.</p>
+            <p>All fields are required before submitting, including the release date.</p>
+            <p>Please note that the rating is based out of 5, with 0 being the lowest and 5 being the highest.</p>
+        </div>
+    </div>
+
+    <form action="/movies" method="POST" onsubmit="return validateForm()">
+        <input type="text" id="title" name="title" placeholder="Title" required>
+        <input type="text" id="director" name="director" placeholder="Director" required>
+        <input type="text" id="genre" name="genre" placeholder="Genre" required>
+        <input type="number" id="rating" name="rating" placeholder="Rating" required>
+        <input type="date" id="releaseDate" name="releaseDate" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="container">
+      <div class="search-info">
+        <p class="bold-text">Search movies by genre:</p>
+        <p>Search movies by the specific genre here.</p>
+        <p>Note that if it is NOT in the database no movies will appear. You will need to add it above first.</p>
+        </div></div>
+        <form id="queryForm">
+            <select id="genreQuery">
+                <option value="">Select Genre</option>
+                <option value="Action">Action</option>
+                <option value="Drama">Drama</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Horror">Horror</option>
+            </select>
+            <button type="button" onclick="queryMovies()">Search</button>
+        </form>
+    
+
+    <div id="moviesContainer"></div>
+
+<div class="footer">
+    <div class="container">
+        <p>&copy; Davery Valdez 2024.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
